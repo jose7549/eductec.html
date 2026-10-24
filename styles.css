@@ -1,0 +1,407 @@
+/* Estilos Base - EducaTech */
+:root {
+    --educatech-dark: #0f172a;
+    --educatech-primary: #2563eb;
+    --educatech-accent: #1d4ed8;
+    --bg-page-slate: #f1f5f9;
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+    color: #0f172a;
+    background-color: var(--bg-page-slate) !important;
+    padding-top: 75px;
+}
+
+/* Header Navbar */
+.bg-dark-educatech {
+    background-color: var(--educatech-dark) !important;
+}
+
+.logo-icon {
+    width: 38px;
+    height: 38px;
+}
+
+.hover-white:hover {
+    color: #ffffff !important;
+}
+
+.navbar-nav {
+    align-items: center !important;
+    justify-content: flex-end;
+    gap: 1.2rem !important;
+}
+
+.navbar-nav .nav-item {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav .nav-link {
+    text-align: center;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+}
+
+/* Botón Volver */
+.btn-volver-custom {
+    width: 40px;
+    height: 40px;
+    border-radius: 50% !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0f172a !important;
+    color: #ffffff !important;
+    border: 2px solid #38bdf8 !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    font-size: 1.1rem;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-volver-custom:hover {
+    background-color: #2563eb !important;
+    transform: scale(1.1);
+}
+
+/* Encabezados y Cajas Principales */
+.box-header-negra {
+    background-color: #0f172a !important;
+    border: 1px solid #1e293b !important;
+    border-radius: 16px;
+    padding: 1.8rem;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.15);
+}
+
+.badge-pilar-header {
+    background-color: #f59e0b;
+    color: #0f172a;
+    font-weight: 800;
+    font-size: 0.85rem;
+    padding: 5px 14px;
+    border-radius: 50px;
+    display: inline-block;
+}
+
+.titulo-destacado-main {
+    color: #ffffff !important;
+    font-weight: 800;
+    font-size: 2.1rem;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.subtitulo-destacado-main {
+    color: #38bdf8 !important;
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+
+.section-header-box {
+    background-color: #1e293b !important;
+    color: #ffffff !important;
+    padding: 10px 18px;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    margin-bottom: 15px;
+}
+
+.section-header-box i {
+    color: #38bdf8;
+    font-size: 1.2rem;
+}
+
+.section-header-box h4 {
+    margin: 0;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #ffffff !important;
+}
+
+.btn-primary-educatech {
+    background-color: #1e40af !important;
+    border-color: #1e40af !important;
+    color: #ffffff !important;
+}
+
+.btn-primary-educatech:hover {
+    background-color: #1e3a8a !important;
+}
+
+.btn-accent-educatech {
+    background-color: #2563eb !important;
+    border-color: #2563eb !important;
+    color: #ffffff !important;
+}
+
+.btn-accent-educatech:hover {
+    background-color: #1d4ed8 !important;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+}
+
+.text-light-gray {
+    color: #cbd5e1 !important;
+}
+
+.hero-img {
+    max-height: 360px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.divider-line {
+    width: 60px;
+    height: 4px;
+    background-color: #2563eb;
+    border-radius: 2px;
+}
+
+.icon-box {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg-blue-subtle { background-color: #0284c7; color: #ffffff; }
+.bg-orange-subtle { background-color: #ea580c; color: #ffffff; }
+.bg-yellow-subtle { background-color: #d97706; color: #ffffff; }
+.bg-purple-subtle { background-color: #9333ea; color: #ffffff; }
+
+.fs-7 { font-size: 0.85rem; }
+
+.bg-light-blue {
+    background-color: #cbd5e1 !important;
+}
+
+.contenedor-padre-seccion {
+    background-color: #e2e8f0 !important;
+    border: 2px solid #94a3b8 !important;
+    color: #0f172a !important;
+    border-radius: 20px;
+}
+
+.bg-card-blue { 
+    background-color: #dbeafe !important; 
+    border: 2px solid #2563eb !important; 
+}
+.bg-card-orange { 
+    background-color: #ffedd5 !important; 
+    border: 2px solid #ea580c !important; 
+}
+.bg-card-yellow { 
+    background-color: #fef3c7 !important; 
+    border: 2px solid #d97706 !important; 
+}
+.bg-card-purple { 
+    background-color: #f3e8ff !important; 
+    border: 2px solid #9333ea !important; 
+}
+
+.program-card img {
+    height: 180px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.program-card .card-title {
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sub-box-info-texto {
+    background-color: #cbd5e1 !important;
+    border: 2px solid #64748b !important;
+    border-radius: 12px;
+    padding: 12px 16px;
+    color: #0f172a !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 80px;
+}
+
+.bg-card-blue .sub-box-info-texto { background-color: #bfdbfe !important; border: 2px solid #3b82f6 !important; }
+.bg-card-yellow .sub-box-info-texto { background-color: #fde68a !important; border: 2px solid #f59e0b !important; }
+.bg-card-purple .sub-box-info-texto { background-color: #e9d5ff !important; border: 2px solid #a855f7 !important; }
+.bg-card-orange .sub-box-info-texto { background-color: #fed7aa !important; border: 2px solid #f97316 !important; }
+
+.sub-box-duracion {
+    background-color: #fef08a !important;
+    border: 2px solid #ca8a04 !important;
+    border-radius: 12px;
+    padding: 12px 16px;
+}
+
+.sub-box-malla {
+    background-color: #e2e8f0 !important;
+    border: 2px solid #94a3b8 !important;
+    border-radius: 12px;
+    padding: 12px;
+}
+
+.box-precio-azul-ejecutivo {
+    background-color: #0f172a !important;
+    color: #ffffff !important;
+    border: 2px solid #3b82f6 !important;
+    border-radius: 16px;
+    padding: 18px;
+    box-shadow: 0 6px 15px rgba(15, 23, 42, 0.2);
+}
+
+.box-precio-azul-ejecutivo .text-matricula {
+    color: #fef08a !important;
+    font-weight: 700;
+}
+
+.box-precio-azul-ejecutivo .text-pension {
+    color: #38bdf8 !important;
+    font-weight: 900;
+    font-size: 1.6rem;
+}
+
+.item-ciclo-malla {
+    background-color: #ffffff !important;
+    border-radius: 10px;
+    padding: 10px 14px;
+    border: 1.5px solid #cbd5e1;
+    margin-bottom: 8px;
+    text-align: left;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+}
+
+.card-carrera-item {
+    border-radius: 18px !important;
+    border-width: 2px !important;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08) !important;
+    transition: transform 0.25s ease;
+}
+
+.card-carrera-item:hover {
+    transform: translateY(-6px);
+}
+
+.card-carrera-item img {
+    height: 180px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.form-card {
+    border-top: 6px solid #d97706 !important;
+}
+
+.inputs-profesionales {
+    background-color: #ffffff !important;
+    border: 2px solid #cbd5e1 !important;
+}
+
+/* ==========================================
+   ESTILOS OFICIALES CHECKOUT Y PLANES 2026
+   ========================================== */
+
+/* Tarjetas de Selección de Método de Pago */
+.checkout-method-card {
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 14px 16px;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    user-select: none;
+}
+
+.checkout-method-card:hover {
+    border-color: #2563eb;
+    background-color: #f8fafc;
+}
+
+.checkout-method-card.active {
+    border-color: #2563eb !important;
+    background-color: #eff6ff !important;
+    box-shadow: 0 0 0 1px #2563eb;
+}
+
+.checkout-method-card .method-radio {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #cbd5e1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.checkout-method-card.active .method-radio {
+    border-color: #2563eb;
+    background-color: #2563eb;
+}
+
+.checkout-method-card.active .method-radio::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+
+/* Tarjetas de Membresía / Planes */
+.plan-pricing-card {
+    background: #ffffff;
+    border: 2px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 24px 20px;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.plan-pricing-card:hover {
+    transform: translateY(-4px);
+    border-color: #2563eb;
+    box-shadow: 0 12px 24px rgba(37, 99, 235, 0.12);
+}
+
+.plan-pricing-card.popular {
+    border-color: #2563eb;
+    background: #ffffff;
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.1);
+}
+
+.plan-badge-top {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #2563eb;
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 14px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}

@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EducaTech - Instituto Superior Tecnológico</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header / Navbar Principal -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark-educatech fixed-top shadow">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center fw-bold fs-3 text-white gap-2 text-decoration-none" href="javascript:void(0)" onclick="mostrarInicio()">
+                    <div class="logo-icon bg-primary text-white rounded-circle d-flex align-items-center justify-content-center shadow-sm">
+                        <i class="fas fa-graduation-cap fs-5"></i>
+                    </div>
+                    <span class="text-white fw-bold">EducaTech</span>
+                </a>
+                <button class="navbar-toggler border-0 shadow-none text-white" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menuNav">
+                    <ul class="navbar-nav ms-auto align-items-center">
+                        <li class="nav-item"><a class="nav-link text-white-50 hover-white" id="nav-inicio" href="javascript:void(0)" onclick="mostrarInicio()">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link text-white-50 hover-white" id="nav-beneficios" href="javascript:void(0)" onclick="verPaginaBeneficios()">Beneficios</a></li>
+                        <li class="nav-item"><a class="nav-link text-white-50 hover-white" id="nav-carreras" href="javascript:void(0)" onclick="verCursosCompletos()">Carreras/Cursos</a></li>
+                        <li class="nav-item"><a class="nav-link text-white-50 hover-white" id="nav-avanzados" href="javascript:void(0)" onclick="verProgramasAvanzados()">Programas Avanzados</a></li>
+                        <li class="nav-item"><a class="nav-link text-white-50 hover-white" id="nav-contacto" href="javascript:void(0)" onclick="verPaginaContacto()">Contacto</a></li>
+                        <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+                            <button type="button" class="btn btn-accent-educatech px-4 fw-bold rounded-pill shadow" onclick="abrirInscripcion('general')">Regístrate / Prueba 14 Días</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <main class="main-content">
+
+        <!-- VISTA 1: INICIO -->
+        <div id="vista-principal">
+            <section id="inicio" class="hero-section py-5 text-white">
+                <div class="container py-4">
+                    <div class="row align-items-center g-4">
+                        <div class="col-lg-6">
+                            <span class="badge bg-warning text-dark px-3 py-2 rounded-pill fw-bold mb-3 fs-7 shadow-sm">
+                                <i class="fas fa-star me-1"></i> Instituto Superior Tecnológico
+                            </span>
+                            <h1 class="display-4 fw-bold mb-3 text-white">Forma tu futuro con educación de calidad</h1>
+                            <p class="fs-5 mb-4 text-light-gray">Plataforma académica interactiva con programas técnicos superiores, pasarela de pagos integrada y validación de datos en tiempo real.</p>
+                            <div class="d-flex flex-wrap gap-3">
+                                <button type="button" class="btn btn-primary-educatech px-4 py-3 fw-semibold rounded-3 shadow-sm" onclick="verCursosCompletos()">Conoce nuestras Carreras</button>
+                                <button type="button" class="btn btn-outline-light px-4 py-3 fw-semibold rounded-3" onclick="verProgramasAvanzados()">Ver Programas Avanzados</button>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 text-center">
+                            <div class="hero-image-card p-2 bg-dark rounded-4 shadow-lg border-2">
+                                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" alt="Estudiantes EducaTech" class="img-fluid rounded-3 hero-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="py-5 bg-light-blue">
+                <div class="container py-3">
+                    <div class="row g-4">
+                        <div class="col-lg-8">
+                            <!-- PILARES -->
+                            <div id="pilares-inicio" class="mb-5 contenedor-padre-seccion p-4 p-md-5 rounded-4 shadow-sm text-center">
+                                <div class="text-center mb-4">
+                                    <h2 class="fw-bold text-dark fs-2 mb-2">¿Por qué estudiar en EducaTech?</h2>
+                                    <p class="text-secondary small fw-medium">Pilares institucionales que garantizan tu éxito profesional.</p>
+                                    <div class="divider-line mx-auto"></div>
+                                </div>
+                                <div class="row g-3 text-center">
+                                    <div class="col-6 col-md-3">
+                                        <div class="card-beneficio p-3 rounded-4 h-100 shadow-sm bg-card-blue cursor-pointer" onclick="abrirPilarIndependiente('calidad')">
+                                            <div class="icon-box bg-blue-subtle mx-auto mb-3 shadow-sm"><i class="fas fa-graduation-cap fs-4"></i></div>
+                                            <h6 class="fw-bold mb-1 text-dark">Educación de Calidad</h6>
+                                            <p class="text-dark small mb-0 fs-7 fw-semibold">Titulaciones y Calidad</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-3">
+                                        <div class="card-beneficio p-3 rounded-4 h-100 shadow-sm bg-card-orange cursor-pointer" onclick="abrirPilarIndependiente('oportunidades')">
+                                            <div class="icon-box bg-orange-subtle mx-auto mb-3 shadow-sm"><i class="fas fa-briefcase fs-4"></i></div>
+                                            <h6 class="fw-bold mb-1 text-dark">Oportunidades</h6>
+                                            <p class="text-dark small mb-0 fs-7 fw-semibold">Bolsa y Convenios</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-3">
+                                        <div class="card-beneficio p-3 rounded-4 h-100 shadow-sm bg-card-yellow cursor-pointer" onclick="abrirPilarIndependiente('flexible')">
+                                            <div class="icon-box bg-yellow-subtle mx-auto mb-3 shadow-sm"><i class="fas fa-desktop fs-4"></i></div>
+                                            <h6 class="fw-bold mb-1 text-dark">Flexible</h6>
+                                            <p class="text-dark small mb-0 fs-7 fw-semibold">A tu propio ritmo</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-3">
+                                        <div class="card-beneficio p-3 rounded-4 h-100 shadow-sm bg-card-purple cursor-pointer" onclick="abrirPilarIndependiente('soporte')">
+                                            <div class="icon-box bg-purple-subtle mx-auto mb-3 shadow-sm"><i class="fas fa-users fs-4"></i></div>
+                                            <h6 class="fw-bold mb-1 text-dark">Soporte</h6>
+                                            <p class="text-dark small mb-0 fs-7 fw-semibold">Mentorería 1 a 1</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- CARRERAS DESTACADAS MUESTRA -->
+                            <div id="programas-muestra" class="contenedor-padre-seccion p-4 p-md-5 rounded-4 shadow-sm text-center">
+                                <div class="text-center mb-4">
+                                    <h2 class="fw-bold text-dark fs-2 mb-2">Carreras Técnicas Destacadas</h2>
+                                    <p class="text-secondary small fw-medium">Haz clic para consultar las carreras técnicas disponibles.</p>
+                                    <div class="divider-line mx-auto"></div>
+                                </div>
+                                <div class="row g-4">
+                                    <div class="col-md-4">
+                                        <div class="card h-100 border-2 shadow-sm program-card bg-card-blue rounded-4 overflow-hidden" onclick="abrirDetalleCurso('software')">
+                                            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Software">
+                                            <div class="card-body d-flex flex-column p-3 text-center">
+                                                <h6 class="card-title fw-bold text-dark fs-6 mb-2">Desarrollo de Software e IA</h6>
+                                                <div class="sub-box-info-texto mb-2 flex-grow-1">
+                                                    <p class="card-text text-dark small fs-7 fw-semibold mb-0">Crea aplicaciones web, móviles y soluciones avanzadas con IA.</p>
+                                                </div>
+                                                <button type="button" class="btn btn-primary-educatech btn-sm w-100 mt-2 py-2 fw-semibold rounded-3">Ver carrera</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card h-100 border-2 shadow-sm program-card bg-card-yellow rounded-4 overflow-hidden" onclick="abrirDetalleCurso('administracion')">
+                                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Administración">
+                                            <div class="card-body d-flex flex-column p-3 text-center">
+                                                <h6 class="card-title fw-bold text-dark fs-6 mb-2">Administración de Empresas</h6>
+                                                <div class="sub-box-info-texto mb-2 flex-grow-1">
+                                                    <p class="card-text text-dark small fs-7 fw-semibold mb-0">Lidera organizaciones corporativas y gestión estratégica.</p>
+                                                </div>
+                                                <button type="button" class="btn btn-primary-educatech btn-sm w-100 mt-2 py-2 fw-semibold rounded-3">Ver carrera</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card h-100 border-2 shadow-sm program-card bg-card-purple rounded-4 overflow-hidden" onclick="abrirDetalleCurso('ciberseguridad')">
+                                            <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Ciberseguridad">
+                                            <div class="card-body d-flex flex-column p-3 text-center">
+                                                <h6 class="card-title fw-bold text-dark fs-6 mb-2">Ciberseguridad & Hacking</h6>
+                                                <div class="sub-box-info-texto mb-2 flex-grow-1">
+                                                    <p class="card-text text-dark small fs-7 fw-semibold mb-0">Protección de datos corporativos y auditoría perimetral.</p>
+                                                </div>
+                                                <button type="button" class="btn btn-primary-educatech btn-sm w-100 mt-2 py-2 fw-semibold rounded-3">Ver carrera</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-center mt-4">
+                                    <button type="button" class="btn btn-accent-educatech fw-bold px-4 py-2 rounded-pill text-white shadow" onclick="verCursosCompletos()">
+                                        <i class="fas fa-arrow-right me-2"></i>Conoce todas nuestras carreras
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Formulario de Registro -->
+                        <div class="col-lg-4" id="registro">
+                            <div class="card border-2 shadow p-4 rounded-4 form-card bg-card-yellow sticky-lg-top" style="top: 90px;">
+                                <h3 class="fw-bold mb-1 text-dark fs-3">Regístrate Ahora</h3>
+                                <p class="text-dark small mb-3 fw-semibold">Ingresa tus datos para procesar tu registro.</p>
+                                <div id="mensajeAlerta"></div>
+                                <form id="formRegistro" onsubmit="guardarRegistro(event)">
+                                    <div class="mb-3">
+                                        <label for="nombre" class="form-label fw-bold small text-dark">Nombre completo</label>
+                                        <input type="text" class="form-control inputs-profesionales" id="nombre" placeholder="Ej. Juan Pérez" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="correo" class="form-label fw-bold small text-dark">Correo electrónico</label>
+                                        <input type="email" class="form-control inputs-profesionales" id="correo" placeholder="Ej. correo@ejemplo.com" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="telefono" class="form-label fw-bold small text-dark">Teléfono</label>
+                                        <input type="tel" class="form-control inputs-profesionales" id="telefono" placeholder="Ej. 987654321" required>
+                                    </div>
+                                    <div class="mb-4 form-check text-start">
+                                        <input type="checkbox" class="form-check-input" id="terminos" required>
+                                        <label class="form-check-label small text-dark fw-bold" for="terminos">Acepto términos y condiciones</label>
+                                    </div>
+                                    <button type="submit" class="btn btn-accent-educatech w-100 py-3 fw-bold text-white rounded-3 shadow">
+                                        Procesar Registro
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- VISTAS DINÁMICAS -->
+        <div id="vista-pilar-individual" class="d-none py-4 bg-light-blue min-vh-100">
+            <div class="container py-2"><div id="contenido-pilar-dinamico"></div></div>
+        </div>
+
+        <div id="vista-cursos-completo" class="d-none py-4 bg-light-blue min-vh-100">
+            <div class="container py-2">
+                <div class="mb-3"><button type="button" class="btn btn-volver-custom" onclick="volverPaginaAnterior()"><i class="fas fa-arrow-left"></i></button></div>
+                
+                <div class="box-header-negra mb-4 text-center">
+                    <span class="badge-pilar-header">OFERTA ACADÉMICA 2026</span>
+                    <h1 class="titulo-destacado-main">Nuestras Carreras Técnicas Profesionales</h1>
+                    <p class="subtitulo-destacado-main mb-0">Consulta la descripción, mallas curriculares, costos y pensiones oficiales.</p>
+                </div>
+                
+                <div class="row g-4" id="contenedor-8-cursos-grid"></div>
+            </div>
+        </div>
+
+        <div id="vista-detalle-curso" class="d-none py-4 bg-light-blue min-vh-100">
+            <div class="container py-2"><div id="contenido-curso-dinamico"></div></div>
+        </div>
+
+        <div id="vista-beneficios-completa" class="d-none py-4 bg-light-blue min-vh-100">
+            <div class="container py-2">
+                <div class="mb-3"><button type="button" class="btn btn-volver-custom" onclick="volverPaginaAnterior()"><i class="fas fa-arrow-left"></i></button></div>
+                
+                <div class="box-header-negra mb-4 text-center">
+                    <span class="badge-pilar-header">VENTAJA COMPETITIVA</span>
+                    <h1 class="titulo-destacado-main">Beneficios Exclusivos EducaTech</h1>
+                    <p class="subtitulo-destacado-main mb-0">Infraestructura, certificaciones oficiales y alianzas estratégicas.</p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="card p-4 bg-card-blue border-2 rounded-4 h-100 shadow-sm text-center">
+                            <div class="d-flex align-items-center justify-content-center gap-3 mb-3">
+                                <div class="bg-primary text-white p-3 rounded-circle shadow-sm"><i class="fas fa-certificate fs-3"></i></div>
+                                <h4 class="fw-bold text-dark mb-0">Titulación Oficial a Nombre de la Nación</h4>
+                            </div>
+                            <div class="sub-box-info-texto mb-3"><p class="text-dark small fw-medium mb-0">Otorgamos títulos de Profesional Técnico respaldados por el Ministerio de Educación.</p></div>
+                            <img src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=600&q=80" alt="Titulación" class="img-fluid rounded-3 mb-0 shadow-sm border-2" style="height: 180px; object-fit: cover; width: 100%;">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card p-4 bg-card-orange border-2 rounded-4 h-100 shadow-sm text-center">
+                            <div class="d-flex align-items-center justify-content-center gap-3 mb-3">
+                                <div class="bg-dark text-warning p-3 rounded-circle shadow-sm"><i class="fas fa-handshake fs-3"></i></div>
+                                <h4 class="fw-bold text-dark mb-0">Bolsa de Trabajo & Convenios Corporativos</h4>
+                            </div>
+                            <div class="sub-box-info-texto mb-3"><p class="text-dark small fw-medium mb-0">Accede a oportunidades laborales exclusivas para realizar prácticas preprofesionales desde 2do ciclo.</p></div>
+                            <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=600&q=80" alt="Bolsa" class="img-fluid rounded-3 mb-0 shadow-sm border-2" style="height: 180px; object-fit: cover; width: 100%;">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card p-4 bg-card-yellow border-2 rounded-4 h-100 shadow-sm text-center">
+                            <div class="d-flex align-items-center justify-content-center gap-3 mb-3">
+                                <div class="bg-dark text-warning p-3 rounded-circle shadow-sm"><i class="fas fa-layer-group fs-3"></i></div>
+                                <h4 class="fw-bold text-dark mb-0">Certificación Modular Progresiva</h4>
+                            </div>
+                            <div class="sub-box-info-texto mb-3"><p class="text-dark small fw-medium mb-0">Al culminar cada ciclo académico obtendrás un certificado acumulativo de especialidad.</p></div>
+                            <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=600&q=80" alt="Modular" class="img-fluid rounded-3 mb-0 shadow-sm border-2" style="height: 180px; object-fit: cover; width: 100%;">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card p-4 bg-card-purple border-2 rounded-4 h-100 shadow-sm text-center">
+                            <div class="d-flex align-items-center justify-content-center gap-3 mb-3">
+                                <div class="bg-dark text-white p-3 rounded-circle shadow-sm"><i class="fas fa-laptop-code fs-3"></i></div>
+                                <h4 class="fw-bold text-dark mb-0">Campus Virtual y Laboratorios Cloud 24/7</h4>
+                            </div>
+                            <div class="sub-box-info-texto mb-3"><p class="text-dark small fw-medium mb-0">Entrena en servidores reales e interactivos sin costo adicional de licencias.</p></div>
+                            <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80" alt="Campus" class="img-fluid rounded-3 mb-0 shadow-sm border-2" style="height: 180px; object-fit: cover; width: 100%;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="vista-programas-avanzados" class="d-none py-4 bg-light-blue min-vh-100">
+            <div class="container py-2">
+                <div class="mb-3"><button type="button" class="btn btn-volver-custom" onclick="volverPaginaAnterior()"><i class="fas fa-arrow-left"></i></button></div>
+                
+                <div class="box-header-negra mb-4 text-center">
+                    <span class="badge-pilar-header">ESPECIALIZACIÓN AVANZADA</span>
+                    <h1 class="titulo-destacado-main">Programas de Especialización Avanzada</h1>
+                    <p class="subtitulo-destacado-main mb-0">Cursos intensivos enfocados en arquitectura avanzada, ciberofensiva e IA.</p>
+                </div>
+                
+                <div class="row g-4" id="contenedor-programas-avanzados-grid"></div>
+            </div>
+        </div>
+
+        <div id="vista-detalle-programa" class="d-none py-4 bg-light-blue min-vh-100">
+            <div class="container py-2"><div id="contenido-programa-dinamico"></div></div>
+        </div>
+
+        <!-- VISTA DE CANALES DE CONTACTO OFICIALES -->
+        <div id="vista-contacto-completa" class="d-none py-4 bg-light-blue min-vh-100">
+            <div class="container py-2">
+                <div class="mb-3"><button type="button" class="btn btn-volver-custom" onclick="volverPaginaAnterior()"><i class="fas fa-arrow-left"></i></button></div>
+                
+                <div class="box-header-negra mb-4 text-center">
+                    <span class="badge-pilar-header">SOPORTE TÉCNICO & ATENCIÓN</span>
+                    <h1 class="titulo-destacado-main">Canales de Contacto Oficiales</h1>
+                    <p class="subtitulo-destacado-main mb-0">Elige la plataforma de tu preferencia para atención personalizada.</p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card border-2 shadow-sm p-4 rounded-4 bg-card-blue text-center h-100 d-flex flex-column align-items-center justify-content-between">
+                            <div class="w-100">
+                                <div class="text-success fs-1 mb-2"><i class="fab fa-whatsapp"></i></div>
+                                <h4 class="fw-bold text-dark mb-3">Atención por WhatsApp</h4>
+                                <div class="sub-box-info-texto mb-3">
+                                    <p class="small text-dark fw-semibold mb-0">Respuesta inmediata para admisión y matrículas.</p>
+                                </div>
+                            </div>
+                            <a href="https://api.whatsapp.com/send?phone=51987654321&text=Hola%20EducaTech" target="_blank" class="btn btn-accent-educatech fw-bold rounded-3 py-2 px-3 shadow w-100" style="max-width: 85%;"><i class="fab fa-whatsapp me-2"></i> Chatear por WhatsApp</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card border-2 shadow-sm p-4 rounded-4 bg-card-purple text-center h-100 d-flex flex-column align-items-center justify-content-between">
+                            <div class="w-100">
+                                <div class="text-primary fs-1 mb-2"><i class="fab fa-discord"></i></div>
+                                <h4 class="fw-bold text-dark mb-3">Comunidad Discord</h4>
+                                <div class="sub-box-info-texto mb-3">
+                                    <p class="small text-dark fw-semibold mb-0">Servidor oficial de alumnos para dudas de código.</p>
+                                </div>
+                            </div>
+                            <a href="https://discord.com" target="_blank" class="btn btn-primary-educatech fw-bold rounded-3 py-2 px-3 shadow w-100" style="max-width: 85%;"><i class="fab fa-discord me-2"></i> Unirse a Discord</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card border-2 shadow-sm p-4 rounded-4 bg-card-orange text-center h-100 d-flex flex-column align-items-center justify-content-between">
+                            <div class="w-100">
+                                <div class="text-danger fs-1 mb-2"><i class="fas fa-envelope"></i></div>
+                                <h4 class="fw-bold text-dark mb-3">Correo Electrónico</h4>
+                                <div class="sub-box-info-texto mb-3">
+                                    <p class="small text-dark fw-semibold mb-0">Atención formal para trámites académicos.</p>
+                                </div>
+                            </div>
+                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=informes@educatech.edu.pe" target="_blank" class="btn btn-dark fw-bold rounded-3 py-2 px-3 shadow w-100" style="max-width: 85%;"><i class="fas fa-paper-plane me-2"></i> Enviar Correo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- VISTA DE SUSCRIPCIÓN / MATRÍCULA -->
+        <div id="vista-suscripcion" class="d-none py-5 bg-light-blue min-vh-100">
+            <div class="container py-4 text-center" style="max-width: 700px;">
+                <div class="text-start mb-3"><button type="button" class="btn btn-volver-custom" onclick="volverPaginaAnterior()"><i class="fas fa-arrow-left"></i></button></div>
+                <div class="card border-0 shadow-lg p-4 p-md-5 rounded-4 bg-white">
+                    <span class="badge bg-primary text-white px-3 py-2 rounded-pill fw-bold mb-3 mx-auto" style="width: fit-content;"><i class="fas fa-shield-alt me-1"></i> Checkout Seguro EducaTech</span>
+                    <h2 class="fw-bold text-dark mb-2">Proceso de Matrícula</h2>
+                    <p class="text-muted small mb-4">Selecciona tu opción de estudio e inicia el pago en el entorno seguro.</p>
+                    <div class="text-start mb-4">
+                        <label class="form-label fw-bold text-dark">Selecciona tu opción académica:</label>
+                        <select class="form-select form-select-lg inputs-profesionales fw-semibold" id="programaPago"></select>
+                    </div>
+                    <div class="d-grid gap-3">
+                        <button type="button" class="btn btn-primary btn-lg fw-bold py-3 rounded-3 shadow-sm d-flex align-items-center justify-content-center gap-2" onclick="abrirPasarelaPagoDirecto('Matrícula de Curso', '100.00')">
+                            <i class="far fa-credit-card fs-4"></i> Pagar con Tarjeta Crédito / Débito / PayPal
+                        </button>
+                        <button type="button" class="btn btn-outline-primary btn-lg fw-bold py-3 rounded-3 shadow-sm d-flex align-items-center justify-content-center gap-2" onclick="abrirModalMembresias()">
+                            <i class="fas fa-gift fs-4"></i> Ver Planes, Ofertas y Prueba Gratuita
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="contacto" class="bg-dark-educatech text-white py-5">
+        <div class="container">
+            <div class="row g-4 fs-7">
+                <div class="col-md-3">
+                    <div class="d-flex align-items-center mb-2 gap-2">
+                        <div class="logo-icon bg-primary text-white rounded-circle d-flex align-items-center justify-content-center shadow-sm">
+                            <i class="fas fa-graduation-cap fs-6"></i>
+                        </div>
+                        <span class="fw-bold fs-5 text-white">EducaTech</span>
+                    </div>
+                    <p class="text-white-50 mb-3 small">Formamos profesionales y especialistas técnicos de alta empleabilidad laboral.</p>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="fw-bold mb-3 text-white small text-uppercase">Navegación</h6>
+                    <ul class="list-unstyled text-white-50 d-flex flex-column gap-2 small">
+                        <li><a href="javascript:void(0)" class="text-white-50 text-decoration-none hover-white" onclick="mostrarInicio()">Inicio</a></li>
+                        <li><a href="javascript:void(0)" class="text-white-50 text-decoration-none hover-white" onclick="verPaginaBeneficios()">Beneficios Institucionales</a></li>
+                        <li><a href="javascript:void(0)" class="text-white-50 text-decoration-none hover-white" onclick="verCursosCompletos()">Ver Carreras</a></li>
+                        <li><a href="javascript:void(0)" class="text-white-50 text-decoration-none hover-white" onclick="verProgramasAvanzados()">Programas Avanzados</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="fw-bold mb-3 text-white small text-uppercase">Contáctanos</h6>
+                    <ul class="list-unstyled text-white-50 d-flex flex-column gap-2 small">
+                        <li><a href="https://maps.google.com/?q=Av.+Grau+100,+Piura,+Peru" target="_blank" class="text-white-50 text-decoration-none hover-white"><i class="fas fa-map-marker-alt me-2 text-primary"></i> Av. Grau 100, Piura</a></li>
+                        <li><a href="https://api.whatsapp.com/send?phone=51987654321&text=Hola%20EducaTech" target="_blank" class="text-white-50 text-decoration-none hover-white"><i class="fab fa-whatsapp me-2 text-warning"></i> WhatsApp: +51 987 654 321</a></li>
+                        <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=informes@educatech.edu.pe" target="_blank" class="text-white-50 text-decoration-none hover-white"><i class="fas fa-envelope me-2 text-primary"></i> informes@educatech.edu.pe</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="fw-bold mb-3 text-white small text-uppercase">Boletín</h6>
+                    <p class="text-white-50 small mb-2">Recibe noticias y becas.</p>
+                    <div class="input-group input-group-sm">
+                        <input type="email" class="form-control border-0 shadow-none bg-white" placeholder="Tu correo">
+                        <button class="btn btn-accent-educatech text-white px-3 fw-bold" type="button" onclick="alert('¡Suscrito al boletín con éxito!')">OK</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="border-secondary my-4 opacity-50">
+            <div class="text-center text-white-50 small">© 2026 EducaTech. Todos los derechos reservados.</div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
