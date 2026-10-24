@@ -405,3 +405,9 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
+/* Ajuste para que a 100% de zoom se vea centrado y estilizado como a 90% */
+body {
+    max-width: 1400px;
+    margin: 0 auto !important;
+    box-shadow: 0 0 30px rgba(0,0,0,0.05);
+}
